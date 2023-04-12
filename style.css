@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #8ab8bb;
+
+}
+a{
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+
+body{
+    
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    padding-left: 290px;
+    padding-right: 290px;
+
+}
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+.titulo2{
+    color: #649681;
+}
+.galeria{
+    
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    grid-template-areas: 
+    "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+    "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5"
+    "f6 f6 f6 f7 f7 f7 f8 f8 f8 f8 f8";
+}
+.foto{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+.foto:nth-child(1){
+    grid-area: f1;
+    background-image: url(https://64.media.tumblr.com/b174d837e60d9322b7e815f337610c6c/b432103317410dd8-c4/s1280x1920/b27289689410d8e570fcaa01e6bfd0589d66f8b4.jpg);
+    
+
+}
+.foto:nth-child(2){
+    grid-area: f2;
+    background-image: url(https://64.media.tumblr.com/2b816cb663404374bf52a44c31a97230/b432103317410dd8-5f/s500x750/0413eda8dab8f4ec5ff31cce0f3a327bc58c1dda.jpg);
+    
+}
+.foto:nth-child(3){
+    grid-area: f3;
+    background-image: url(https://64.media.tumblr.com/bccce8a61ab7bd352e3c974baa713a53/b432103317410dd8-6e/s1280x1920/e0c38f702c8f0e0908b4cb3265264bdfcc851b08.jpg);
+}
+.foto:nth-child(4){
+    grid-area: f4;
+    background-image: url(https://64.media.tumblr.com/f9eacaaf6fbee7da529d440168102390/b432103317410dd8-80/s1280x1920/d5feef7fb9dbcbfc55878db81c26e48f26d4f7ff.jpg);
+
+    
+}
+.foto:nth-child(5){
+    grid-area: f5;
+    background-image: url(https://64.media.tumblr.com/f5944ef9dbcb1ceb6d8d97a8f4685661/b432103317410dd8-a1/s1280x1920/ea08ae25e11f00c6c410e01fc6d1f5fdb52cf2fc.jpg);
+}
+.foto:nth-child(6){
+    grid-area: f6;
+    background-image: url(https://64.media.tumblr.com/3b1d4ff0aaa3a91387b09202824a6866/b432103317410dd8-3f/s640x960/8ff1bad5ce2b2240aaca296866075f273cc6cd6b.jpg);
+}
+.foto:nth-child(7){
+    grid-area: f7;
+    background-image: url(https://64.media.tumblr.com/e428db34c3dc3df148d8ac21a2446961/b432103317410dd8-e0/s400x600/976fddbdb0f2bff38c578a4bda76138353b9c1b0.gifv);
+    
+}
+.foto:nth-child(8){
+    grid-area: f8;
+    background-image: url(https://64.media.tumblr.com/9d04a3d717fae0fb7cf40e3e0a5ec057/b432103317410dd8-3d/s400x600/e9c5b484fcae4746ee5ce17bf0777a555b2c1ca8.jpg);
+}
+.foto__info{
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background-color: #0009;
+    color: white;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: .3s;
+    text-align: center;
+    padding-top: 20px ;
+
+}
+.foto:hover > .foto__info{
+    transform: translateY(0%);
+}
+.ver__mais {
+    text-align: center;
+    background-color: #649681;
+    width: 280px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    left: 510px;
+    top: 500px;
+    position: absolute;
+    border-radius: 32px;
+    padding: 21.5px 0px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    body{
+        padding-left: 12px ;
+        padding-right: 12px ;
+    }
+    .galeria{
+    display: flex;
+    flex-direction: column;
+    }
+    .foto{
+        width: 100%;
+        height: 33vh;
+    }
+}
